@@ -11,6 +11,7 @@ import {
 } from '@production-angular/core-state';
 import { MaterialModule, materialRoutes } from '@production-angular/material';
 import { CoreDataModule, coreDataRoutes } from '@production-angular/core-data';
+import { RoutingModule } from './routing.module';
 
 @NgModule({
   declarations: [AppComponent],
@@ -22,6 +23,7 @@ import { CoreDataModule, coreDataRoutes } from '@production-angular/core-data';
     CoreStateModule,
     MaterialModule,
     CoreDataModule,
+    RoutingModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
