@@ -2,6 +2,11 @@
   "extends": "./tsconfig.json",
   "include": ["**/*.ts"],
   "compilerOptions": {
-    "types": ["jest", "node"]
+    "types": ["jest", "node"],
+    "forceConsistentCasingInFileNames": true,
+    "strict": true,
+  },
+  "angularCompilerOptions": {
+    "strictTemplates": true
   }
 }
