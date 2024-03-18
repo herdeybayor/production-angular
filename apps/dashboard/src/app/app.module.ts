@@ -9,17 +9,17 @@ import { MaterialModule } from '@production-angular/material';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { RoutingModule } from './routing.module';
-import { WidgetsDetailsComponent } from './widgets/widgets-details/widgets-details.component';
 import { WidgetsListComponent } from './widgets/widgets-list/widgets-list.component';
 import { WidgetsComponent } from './widgets/widgets.component';
+import { WidgetDetailsComponent } from './widgets/widget-details/widget-details.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
     WidgetsComponent,
-    WidgetsDetailsComponent,
     WidgetsListComponent,
+    WidgetDetailsComponent,
   ],
   imports: [
     BrowserAnimationsModule,
