@@ -1,33 +1,35 @@
-import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
-
-import { AppComponent } from './app.component';
 import { HttpClientModule } from '@angular/common/http';
+import { NgModule } from '@angular/core';
+import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { StoreModule } from '@ngrx/store';
-import {
-  CoreStateModule,
-  coreStateRoutes,
-} from '@production-angular/core-state';
-import { MaterialModule, materialRoutes } from '@production-angular/material';
-import { CoreDataModule, coreDataRoutes } from '@production-angular/core-data';
-import { RoutingModule } from './routing.module';
-import { WidgetsComponent } from './widgets/widgets.component';
-import { WidgetsListComponent } from './widgets/widgets-list/widgets-list.component';
-import { WidgetsDetailsComponent } from './widgets/widgets-details/widgets-details.component';
+import { CoreDataModule } from '@production-angular/core-data';
+import { CoreStateModule } from '@production-angular/core-state';
+import { MaterialModule } from '@production-angular/material';
+import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
+import { RoutingModule } from './routing.module';
+import { WidgetsDetailsComponent } from './widgets/widgets-details/widgets-details.component';
+import { WidgetsListComponent } from './widgets/widgets-list/widgets-list.component';
+import { WidgetsComponent } from './widgets/widgets.component';
 
 @NgModule({
-  declarations: [AppComponent, WidgetsComponent, WidgetsListComponent, WidgetsDetailsComponent, HomeComponent],
+  declarations: [
+    AppComponent,
+    HomeComponent,
+    WidgetsComponent,
+    WidgetsDetailsComponent,
+    WidgetsListComponent,
+  ],
   imports: [
-    BrowserModule,
-    HttpClientModule,
     BrowserAnimationsModule,
-    StoreModule.forRoot({}, {}),
-    CoreStateModule,
-    MaterialModule,
+    BrowserModule,
     CoreDataModule,
+    CoreStateModule,
+    HttpClientModule,
+    MaterialModule,
     RoutingModule,
+    StoreModule.forRoot({}, {}),
   ],
   providers: [],
   bootstrap: [AppComponent],
