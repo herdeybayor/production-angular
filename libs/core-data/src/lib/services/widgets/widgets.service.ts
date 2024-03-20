@@ -12,6 +12,7 @@ export class WidgetsService {
   constructor(private http: HttpClient) {}
 
   all() {
+    console.log(this.getUrl());
     return this.http.get<Widget[]>(this.getUrl());
   }
 
@@ -32,7 +33,7 @@ export class WidgetsService {
   }
 
   private getUrl() {
-    return `${environment.apiEndpoint}${this.model}`;
+    return `${environment.apiEndpoint}/${this.model}`;
   }
 
   private getUrlWithId(id: string | null) {
