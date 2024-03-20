@@ -7,7 +7,7 @@ import { Widget } from '@production-angular/api-interfaces';
   styleUrls: ['./widget-details.component.scss'],
 })
 export class WidgetDetailsComponent {
-  currentWidget: Widget | null = null;
+  currentWidget: Widget = { id: null, title: '', description: '' };
   originalTitle = '';
   @Input() set widget(value: Widget) {
     if (value) this.originalTitle = value.title;

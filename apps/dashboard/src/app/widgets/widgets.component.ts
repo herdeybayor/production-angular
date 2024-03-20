@@ -20,7 +20,7 @@ const emptyWidget: Widget = {
 })
 export class WidgetsComponent implements OnInit {
   widgets: Widget[] = [];
-  selectedWidget: Widget | null = null;
+  selectedWidget: Widget = emptyWidget;
 
   ngOnInit(): void {
     this.reset();
@@ -28,14 +28,14 @@ export class WidgetsComponent implements OnInit {
 
   reset() {
     this.loadWidgets();
-    this.selectWidget(null);
+    this.selectWidget(emptyWidget);
   }
 
   resetForm() {
     this.selectedWidget = emptyWidget;
   }
 
-  selectWidget(widget: Widget | null) {
+  selectWidget(widget: Widget) {
     this.selectedWidget = widget;
   }
 
