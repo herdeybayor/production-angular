@@ -13,6 +13,7 @@ import { RoutingModule } from './routing.module';
 import { WidgetDetailsComponent } from './widgets/widget-details/widget-details.component';
 import { WidgetsListComponent } from './widgets/widgets-list/widgets-list.component';
 import { WidgetsComponent } from './widgets/widgets.component';
+import { UiToolbarModule } from '@production-angular/ui-toolbar';
 
 @NgModule({
   declarations: [
@@ -32,6 +33,7 @@ import { WidgetsComponent } from './widgets/widgets.component';
     MaterialModule,
     RoutingModule,
     StoreModule.forRoot({}, {}),
+    UiToolbarModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
